@@ -14,11 +14,11 @@ def self.all
 end
 
 def songs
-Song.all.collect {|songs| songs.genre == self}
+Song.all.sellect {|songs| songs.genre == self}
 end
 
 def artists
-  songs.map {|artists| artists.artist}
+  songs.collect {|song| song.artist}
 end
 
 
