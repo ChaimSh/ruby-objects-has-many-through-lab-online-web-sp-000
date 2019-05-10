@@ -18,12 +18,12 @@ Song.new(name, self, genre)
 end
 
 def songs
-  Song.all.collect {|songs| songs.artist == self}
+  Song.all.sellect {|song| song.artist == self}
 end
 
 
 def genres
-  songs.map {|genres| genres.genre}
+  songs.map {|song|song.genre}
 end
 
 
